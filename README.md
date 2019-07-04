@@ -51,7 +51,7 @@ docker run -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
 ```bash 
 http://localhost/
 ```
-![](https://github.com/nu11secur1ty/opensuse-apache-docker/blob/master/Screenshot%20from%202018-05-13%2002-37-09.png)
+![]()
 
 # Check for docker running containers:
 ```bash
