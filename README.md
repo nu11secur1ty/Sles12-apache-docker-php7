@@ -29,11 +29,11 @@ rcdocker start
 
 # Introduction
 
-Dockerfile to build an OpenSUSE 13.2 container image with apache2 and php5.
+Dockerfile to build an OpenSUSE 42.3 container image with apache2 and php7.
 
 ## Features:
 - Apache2
-- php5 & common modules
+- php7 & common modules
 - php.ini configured to utilize `getenv()`
 
 # Quick Start
