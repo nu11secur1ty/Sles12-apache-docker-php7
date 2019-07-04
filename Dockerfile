@@ -1,4 +1,4 @@
-FROM opensuse:42.3
+FROM opensuse/leap
 MAINTAINER venvaropt@gmail.com
  
 RUN zypper in apache2
