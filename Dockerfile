@@ -1,6 +1,12 @@
 # This docker file contains build environment
 FROM opensuse/tumbleweed
-MAINTAINER krytin <krytin.vitaly@apriorit.com>
+MAINTAINER nu11secur1ty <venvaropt@gmail.com.com>
+RUN zypper in apache2
+RUN systemctl enable apache2
+RUN rcapache2 start
+RUN zypper in php7 php7-mysql apache2-mod_php7
+RUN a2enmod php7
+RUN zypper in mariadb mariadb-tools
 
 RUN zypper -n update && zypper clean --all
 RUN zypper -n install -t pattern devel_C_C++
@@ -23,3 +29,5 @@ RUN zypper -n --no-gpg-checks install --oldpackage \
 http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/x86_64/kernel-default-devel-4.15.12-1.1.x86_64.rpm \
 http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/x86_64/kernel-default-4.15.12-1.1.x86_64.rpm \
 http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/noarch/kernel-devel-4.15.12-1.1.noarch.rpm
+
+COPY 
