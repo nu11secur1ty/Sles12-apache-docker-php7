@@ -1,6 +1,5 @@
 [ ![Codeship Status for novacoast/opensuse-apache-docker](https://codeship.com/projects/b0bd21b0-5274-0132-69f7-72279d09a1d7/status)](https://codeship.com/projects/48655) [![Code Climate](https://codeclimate.com/github/novacoast/opensuse-apache-docker/badges/gpa.svg)](https://codeclimate.com/github/novacoast/opensuse-apache-docker)
 
-Demo
 
 # Table of Contents
 
