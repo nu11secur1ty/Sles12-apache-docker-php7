@@ -1,0 +1,6 @@
+opensuseapache:
+  build: .
+  volumes:
+    - webapp/:/srv/www/htdocs
+  ports:
+    - "8080:80"

@@ -1,0 +1,13 @@
+machine:
+  services:
+    - docker
+
+test:
+  override:
+    - /bin/true
+
+deployment:
+  release:
+    branch: release
+    commands:
+      - make release
