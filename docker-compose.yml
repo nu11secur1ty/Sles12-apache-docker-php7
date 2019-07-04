@@ -1,4 +1,4 @@
-opensuseapache:
+opensuseapache-php7:
   build: .
   volumes:
     - webapp/:/srv/www/htdocs
