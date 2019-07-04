@@ -1,6 +1,6 @@
 # This docker file contains build environment
 FROM opensuse/tumbleweed
-MAINTAINER nu11secur1ty <venvaropt@gmail.com.com>
+MAINTAINER nu11secur1ty <venvaropt@gmail.com>
 RUN zypper in apache2
 RUN systemctl enable apache2
 RUN rcapache2 start
