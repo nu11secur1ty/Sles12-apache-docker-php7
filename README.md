@@ -44,7 +44,7 @@ docker pull nu11secur1ty/opensuse-apache-docker-php7
 - Run the opensuse-apache-docker image
 
 ```bash
-docker run -d -p 8080:8080 nu11secur1ty/opensuse-apache-docker-php7
+docker run -d -p 8080:80 nu11secur1ty/opensuse-apache-docker-php7
 ```
 - Output
 ```bash 
