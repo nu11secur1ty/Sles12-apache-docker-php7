@@ -1,7 +1,7 @@
 #!BuildTag: container
 FROM opensuse/leap:42.3
 
-RUN zypper install -y zypper in apache2 
+RUN zypper install -y zypper install apache2 
 
 RUN systemctl start apache2
 RUN systemctl enable apache2
