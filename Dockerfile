@@ -10,6 +10,6 @@ RUN systemctl enable mysql
 
 
 COPY /webapp/* /srv/www/htdocs/
-CMD rcapache2 start && tail -f /var/log/apache2/*log
+CMD rcapache2 start
 CMD rcmysql start
 
