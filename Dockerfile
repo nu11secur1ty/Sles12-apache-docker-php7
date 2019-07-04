@@ -1,27 +1,25 @@
-FROM opensuse:latest
-MAINTAINER venvaropt@gmail.com
+# This docker file contains build environment
+FROM opensuse/tumbleweed
+MAINTAINER krytin <krytin.vitaly@apriorit.com>
 
-ENV container docker
+RUN zypper -n update && zypper clean --all
+RUN zypper -n install -t pattern devel_C_C++
+RUN zypper -n install clang llvm-clang-devel llvm-devel cmake libelf-devel \
+kernel-vanilla-devel kernel kernel-devel
 
-RUN zypper -n install systemd; zypper clean ; \
-(cd /usr/lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
-rm -f /usr/lib/systemd/system/multi-user.target.wants/*;\
-rm -f /etc/systemd/system/*.wants/*;\
-rm -f /usr/lib/systemd/system/local-fs.target.wants/*; \
-rm -f /usr/lib/systemd/system/sockets.target.wants/*udev*; \
-rm -f /usr/lib/systemd/system/sockets.target.wants/*initctl*; \
-rm -f /usr/lib/systemd/system/basic.target.wants/*;\
-rm -f /usr/lib/systemd/system/anaconda.target.wants/*;
-zypper --non-interactive --no-gpg-checks ref; \
-zypper --non-interactive in --recommends \
-apache2 php7 php7-mysql apache2-mod_php7 \
-a2enmod php7 \
-zypper clean; \
-sed -i 's/variables_order = "GPCS"/variables_order = "EGPCS"/g' /etc/php7/apache2/php.ini
-    
-COPY /webapp/* /srv/www/htdocs/
+RUN zypper -n dup
 
-CMD rcapache2 start && tail -f /var/log/apache2/*log
+RUN zypper -n --no-gpg-checks install --oldpackage \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.10/openSUSE_Tumbleweed/x86_64/kernel-default-devel-4.10.17-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.10/openSUSE_Tumbleweed/x86_64/kernel-default-4.10.17-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.10/openSUSE_Tumbleweed/noarch/kernel-devel-4.10.17-1.1.noarch.rpm
 
-VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/lib/systemd/systemd", "--system"]
+RUN zypper -n --no-gpg-checks install --oldpackage \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.12/openSUSE_Tumbleweed/x86_64/kernel-default-devel-4.12.14-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.12/openSUSE_Tumbleweed/x86_64/kernel-default-4.12.14-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.12/openSUSE_Tumbleweed/noarch/kernel-devel-4.12.14-1.1.noarch.rpm
+
+RUN zypper -n --no-gpg-checks install --oldpackage \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/x86_64/kernel-default-devel-4.15.12-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/x86_64/kernel-default-4.15.12-1.1.x86_64.rpm \
+http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/noarch/kernel-devel-4.15.12-1.1.noarch.rpm
