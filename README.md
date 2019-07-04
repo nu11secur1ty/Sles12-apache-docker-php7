@@ -99,7 +99,7 @@ docker pull nu11secur1ty/opensuse-apache-docker-php7:latest
 - **Step 3**: Start the image
 
 ```bash
-docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
+docker run --name='opensuse-apache' -d -p 8080:80 nu11secur1ty/opensuse-apache-docker-php7
 echo "or"
 docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
 ```
