@@ -100,6 +100,8 @@ docker pull nu11secur1ty/opensuse-apache-docker-php7:latest
 
 ```bash
 docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
+echo "or"
+docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
 ```
 
 # Docker-Compose
