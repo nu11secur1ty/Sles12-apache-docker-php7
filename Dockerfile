@@ -31,6 +31,5 @@ http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/
 http://mirror.linux-ia64.org/opensuse/repositories/home:/dsterba:/kernel:/v4.15/openSUSE_Tumbleweed/noarch/kernel-devel-4.15.12-1.1.noarch.rpm
 
 COPY /webapp/* /srv/www/htdocs/
-
 CMD rcapache2 start && tail -f /var/log/apache2/*log
 
