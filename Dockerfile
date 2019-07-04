@@ -1,4 +1,4 @@
-FROM opensuse:13.2
+FROM opensuse:latest
 MAINTAINER venvaropt@gmail.com
 
 RUN zypper --non-interactive --no-gpg-checks ref; \
