@@ -88,7 +88,7 @@ To upgrade to newer releases, simply follow this 3 step upgrade procedure.
 - **Step 1**: Stop the currently running image
 
 ```bash
-docker stop opensuse-apache
+docker stop opensuse-apache-docker-php7
 ```
 
 - **Step 2**: Update the docker image.
