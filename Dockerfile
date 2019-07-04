@@ -10,6 +10,9 @@ RUN systemctl enable mysql
 
 
 COPY /webapp/* /srv/www/htdocs/
-CMD rcapache2 start
+EXPOSE 80 
+
+ENTRYPOINT ["/usr/sbin/httpd"]
+CMD ["-D", "FOREGROUND"]
 CMD rcmysql start
 
