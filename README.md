@@ -48,7 +48,7 @@ docker run -d -p 8080:8080 nu11secur1ty/opensuse-apache-docker-php7
 ```
 - Output
 ```bash 
-http://localhost/
+http://localhost:8080/
 ```
 ![]()
 
