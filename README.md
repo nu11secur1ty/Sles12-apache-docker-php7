@@ -44,7 +44,7 @@ docker pull nu11secur1ty/opensuse-apache-docker-php7
 - Run the opensuse-apache-docker image
 
 ```bash
-docker run -d -p 8080:80 nu11secur1ty/opensuse-apache-docker-php7
+docker run -d -p 8080:80 nu11secur1ty/suse-apache-docker-php7
 ```
 - Output
 ```bash 
@@ -66,7 +66,7 @@ docker images
 
 Pull the latest version of the image from the docker index. These builds are performed by the **Docker Trusted Build** service.
 
-https://hub.docker.com/r/nu11secur1ty/opensuse-apache-docker-php7
+https://hub.docker.com/r/nu11secur1ty/suse-apache-docker-php7
 
 ```bash
 docker pull nu11secur1ty/opensuse-apache-docker-php7:latest
@@ -75,9 +75,9 @@ docker pull nu11secur1ty/opensuse-apache-docker-php7:latest
 Alternately you can build the image yourself.
 
 ```bash
-git clone https://github.com/nu11secur1ty/opensuse-apache-docker-php7.git
-cd opensuse-apache-docker-php7
-docker build -t="$USER/opensuse-apache-docker-php7" .
+git clone https://github.com/nu11secur1ty/suse-apache-docker-php7.git
+cd suse-apache-docker-php7
+docker build -t="$USER/suse-apache-docker-php7" .
 ```
 
 # Upgrading
@@ -87,21 +87,21 @@ To upgrade to newer releases, simply follow this 3 step upgrade procedure.
 - **Step 1**: Stop the currently running image
 
 ```bash
-docker stop opensuse-apache-docker-php7
+docker stop suse-apache-docker-php7
 ```
 
 - **Step 2**: Update the docker image.
 
 ```bash
-docker pull nu11secur1ty/opensuse-apache-docker-php7:latest
+docker pull nu11secur1ty/suse-apache-docker-php7:latest
 ```
 
 - **Step 3**: Start the image
 
 ```bash
-docker run --name='opensuse-apache' -d -p 8080:80 nu11secur1ty/opensuse-apache-docker-php7
+docker run --name='suse-apache' -d -p 8080:80 nu11secur1ty/suse-apache-docker-php7
 echo "or"
-docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-docker-php7
+docker run --name='suse-apache' -d -p 80:80 nu11secur1ty/suse-apache-docker-php7
 ```
 
 # Docker-Compose
@@ -109,8 +109,8 @@ docker run --name='opensuse-apache' -d -p 80:80 nu11secur1ty/opensuse-apache-doc
 Build and run using [docker-compose](https://github.com/docker/compose)
 
 ```bash
-git clone https://github.com/nu11secur1ty/opensuse-apache-docker-php7.git
-cd opensuse-apache-docker-php7
+git clone https://github.com/nu11secur1ty/suse-apache-docker-php7.git
+cd suse-apache-docker-php7
 docker-compose build
 docker-compose up
 ```
