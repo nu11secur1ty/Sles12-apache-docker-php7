@@ -113,12 +113,15 @@ zypper in docker-compose
 git clone https://github.com/nu11secur1ty/suse-apache-docker-php7.git
 cd suse-apache-docker-php7
 docker-compose build
+```
+- Alias
+```bash
 docker-compose up
 ```
 
 - when you make a changes 
 ```bash
-docker-cpmpose up
+docker-cpmpose buld
 ```
 - run your container
 ```bash
@@ -129,6 +132,9 @@ Removing intermediate container 862428281d57
  `---> b39e0d40b7e4`
 Successfully built `b39e0d40b7e4`
 Successfully tagged suseapachedockerphp7_opensuseapache-php7:latest
+
+-------------------------------------------------------------------------------------------------------------------
+
 
 The [webapp](webapp) folder on the host will be mounted into the container's apache root
 
