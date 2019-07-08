@@ -115,6 +115,11 @@ cd suse-apache-docker-php7
 docker-compose build
 docker-compose up
 ```
+
+- when you makie a changes
+```bash
+docker-cpmpose up
+```
 - run your container
 ```bash
 docker run -d -p 8080:80 opensuseapache-php7:latest
