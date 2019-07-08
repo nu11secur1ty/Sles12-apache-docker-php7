@@ -115,6 +115,10 @@ cd suse-apache-docker-php7
 docker-compose build
 docker-compose up
 ```
+- run your container
+```bash
+docker run -d -p 8080:80 opensuseapache-php7:latest
+```
 
 The [webapp](webapp) folder on the host will be mounted into the container's apache root
 
