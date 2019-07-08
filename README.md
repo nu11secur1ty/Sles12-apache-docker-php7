@@ -39,7 +39,7 @@ Dockerfile to build an OpenSUSE 42.3 container image with apache2 and php7.
 
 - Pull image from docker
 ```bash
-docker pull nu11secur1ty/opensuse-apache-docker-php7
+docker pull nu11secur1ty/suse-apache-docker-php7
 ```
 - Run the opensuse-apache-docker image
 
