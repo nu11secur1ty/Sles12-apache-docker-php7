@@ -15,7 +15,7 @@ RUN zypper refs && zypper refresh
 
 # install apache2 and php7 using zypper
 RUN     zypper  --non-interactive in apache2 \
-        apache2-mod_php7
+        apache2-mod_php7 php7 php7-mysql apache2-mod_php7 
 
 # install apache2 using zypper
 RUN zypper -n update && zypper -n install apache2
