@@ -122,7 +122,7 @@ docker-compose up
 
 - when you make a changes 
 ```bash
-docker-cpmpose buld
+docker-compose build
 ```
 - run your container
 ```bash
