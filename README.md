@@ -109,6 +109,7 @@ docker run --name='suse-apache' -d -p 80:80 nu11secur1ty/suse-apache-docker-php7
 Build and run using [docker-compose](https://github.com/docker/compose)
 
 ```bash
+zypper in docker-compose
 git clone https://github.com/nu11secur1ty/suse-apache-docker-php7.git
 cd suse-apache-docker-php7
 docker-compose build
