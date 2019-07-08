@@ -18,7 +18,7 @@ RUN     zypper  --non-interactive in apache2 \
         apache2-mod_php7
 
 # install apache2 using zypper
-#RUN zypper -n update && zypper -n install apache2
+RUN zypper -n update && zypper -n install apache2
 
 # start apache2 service
 CMD ["apache2ctl", "-D FOREGROUND"]
