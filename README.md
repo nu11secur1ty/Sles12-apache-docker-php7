@@ -122,8 +122,13 @@ docker-cpmpose up
 ```
 - run your container
 ```bash
-docker run -d -p 8080:80 opensuseapache-php7:latest
+docker run -d -p 8080:80 _your_image
 ```
+- Image example:
+Removing intermediate container 862428281d57
+ `---> b39e0d40b7e4`
+Successfully built `b39e0d40b7e4`
+Successfully tagged suseapachedockerphp7_opensuseapache-php7:latest
 
 The [webapp](webapp) folder on the host will be mounted into the container's apache root
 
