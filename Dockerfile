@@ -1,5 +1,5 @@
 FROM opensuse/leap
-MAINTAINER venvaropt@gmail.com
+MAINTAINER "Ventsislav Varbanovski <venvaropt@gmail.com>"
 
 RUN zypper --non-interactive --no-gpg-checks ref; \
     zypper --non-interactive in --recommends \
