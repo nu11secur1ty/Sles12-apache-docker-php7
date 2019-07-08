@@ -12,7 +12,9 @@ RUN zypper -n update && zypper -n install php7 php7-mysql apache2-mod_php7
 RUN a2enmod php7
 
 # create welcome file for apache service
-RUN echo "Welcome to virtualapps/opensuse-apache2, copy your web pages to /srv/www/htdocs/" > /srv/www/htdocs/index.html 
+# RUN echo "Welcome to virtualapps/opensuse-apache2, copy your web pages to /srv/www/htdocs/" > /srv/www/htdocs/index.html 
+
+COPY /webapp/* /srv/www/htdocs/
 
 # start apache2 service
 CMD ["apache2ctl", "-D FOREGROUND"]
