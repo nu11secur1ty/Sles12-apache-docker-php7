@@ -116,7 +116,7 @@ docker-compose build
 docker-compose up
 ```
 
-- when you makie a changes
+- when you make a changes 
 ```bash
 docker-cpmpose up
 ```
