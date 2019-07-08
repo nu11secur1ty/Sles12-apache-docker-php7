@@ -103,6 +103,7 @@ docker run --name='suse-apache' -d -p 8080:80 nu11secur1ty/suse-apache-docker-ph
 echo "or"
 docker run --name='suse-apache' -d -p 80:80 nu11secur1ty/suse-apache-docker-php7
 ```
+---------------------------------------------------------------------------------
 
 # Docker-Compose
 
@@ -132,6 +133,16 @@ Removing intermediate container 862428281d57
  `---> b39e0d40b7e4`
 Successfully built `b39e0d40b7e4`
 Successfully tagged suseapachedockerphp7_opensuseapache-php7:latest
+
+# Stop docker
+- Scan for dockers which you want to stop
+```bash
+docker container ls
+```
+- stop your docker
+```bash
+docker stop 4a80d39c80e1
+```
 
 -------------------------------------------------------------------------------------------------------------------
 
