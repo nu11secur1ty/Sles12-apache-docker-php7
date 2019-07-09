@@ -12,7 +12,7 @@ RUN zypper -n update && zypper -n install php7 php7-mysql apache2-mod_php7
 RUN a2enmod php7
 
 # install mysql
-RUN zypper -n update && zypper -n  mariadb mariadb-tools
+RUN zypper -n update && zypper -n  mysql
 
 # enable mysql
 RUN systemctl enable mysql
