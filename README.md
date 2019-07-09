@@ -149,7 +149,7 @@ docker rmi 4a80d39c80e1
 ```
 -------------------------------------------------------------------------------------------------------------------
 # How do I SSH into a running container
-***There is a docker exec command that can be used to connect to a container that is already running. 
+***There is a docker exec command that can be used to connect to a container that is already running.*** 
  
    - Use docker ps to get the name of the existing container
    - Use the command `docker exec -it <container name> /bin/bash` to get a bash shell in the container
