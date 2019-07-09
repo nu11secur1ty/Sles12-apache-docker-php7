@@ -11,6 +11,13 @@ RUN zypper -n update && zypper -n install php7 php7-mysql apache2-mod_php7
 # Enamble php7_apache module
 RUN a2enmod php7
 
+# install mysql
+RUN zypper -n update && zypper -n  mariadb mariadb-tools
+
+# enable mysql
+RUN systemctl enable mysql
+RUN systemctl start mysql
+
 # create welcome file for apache service
 # RUN echo "Welcome to virtualapps/opensuse-apache2, copy your web pages to /srv/www/htdocs/" > /srv/www/htdocs/index.html 
 
