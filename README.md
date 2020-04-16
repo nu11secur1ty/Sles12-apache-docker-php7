@@ -45,7 +45,7 @@ docker pull nu11secur1ty/suse-apache-docker-php7
 ```bash
 docker run -d -p 8080:80 nu11secur1ty/suse-apache-docker-php7
 ```
-# Terminal access to the docker
+- - - Terminal access to the docker
 ```bash
 docker run -t -i nu11secur1ty/suse-apache-docker-php7 /bin/bash
 ```
