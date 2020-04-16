@@ -1,6 +1,9 @@
 FROM opensuse/leap
 MAINTAINER "Ventsislav Varbanovski <venvaropt@gmail.com>"
 LABEL description="use this image to host your static web pages."
+# Update OS
+RUN zypper -n up
+RUN zypper -n dup
 
 # install apache2 using zypper
 RUN zypper -n update && zypper -n install apache2
