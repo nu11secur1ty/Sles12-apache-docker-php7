@@ -14,6 +14,11 @@ RUN zypper -n update && zypper -n install php7 php7-mysql apache2-mod_php7
 # Enamble php7_apache module
 RUN a2enmod php7
 
+# Installing of other software
+RUN zypper install -y vim
+RUN zypper install -y nmap
+RUN zypper install -y net-tools-deprecated
+
 # create welcome file for apache service
 # RUN echo "Welcome to virtualapps/opensuse-apache2, copy your web pages to /srv/www/htdocs/" > /srv/www/htdocs/index.html 
 
