@@ -25,7 +25,10 @@ zypper -n in git
 ```bash
 rcdocker start
 ```
-
+# Terminal access to the docker
+```bash
+docker run -t -i nu11secur1ty/suse-apache-docker-php7 /bin/bash
+```
 # Introduction
 
 Dockerfile to build an OpenSUSE 42.3 container image with apache2 and php7.
