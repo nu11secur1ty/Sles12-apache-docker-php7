@@ -1,5 +1,5 @@
 <?php
-
+echo "krastavici";
 // Show all information, defaults to INFO_ALL
 phpinfo();
 
